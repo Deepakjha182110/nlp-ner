@@ -10,7 +10,7 @@ class OracleDB:
     @classmethod
     def create_instance(cls):
         # This method initializes and returns an instance of OracleDB
-        return cls(user="SYSTEM", password="Ritu#1507", dsn="localhost:1521/testdb")
+        return cls(user="user", password="password", dsn="localhost:1521/testdb")
 
     def execute_select(self, query, params=None):
         with oracledb.connect(user=self.user, password=self.password, dsn=self.dsn) as connection:
